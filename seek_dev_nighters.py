@@ -8,14 +8,17 @@ API = 'https://devman.org/api/challenges/solution_attempts/'
 def load_attempts():
     pages = requests.get(API).json()['number_of_pages']
     for page in range(pages):
-        parameters = {'pages': page}
-        data_response = requests.get(API, params=parameters).json()
+        parameters_ = {'pages': page}
+        data_response = requests.get(API, params=parameters_).json()
         for record in data_response:
             yield record
 
 
 def get_midnighters(devman_adepts):
-    pass
+    for adept in devman_adepts:
+        correct_date_time = get_correct_time(adept['timestamp'], adept['timezone'])
+        if correct_date_time.hour in (0, 5):
+            yield adept['username']
 
 
 def get_correct_time(timestamp, timezone):
