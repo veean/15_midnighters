@@ -18,7 +18,7 @@ def load_attempts():
 def get_midnighters(devman_adepts):
     for adept in devman_adepts:
         correct_date_time = get_correct_time(adept['timestamp'], adept['timezone'])
-        if correct_date_time and correct_date_time.hour in (1, 5):
+        if correct_date_time and correct_date_time.hour in (0, 5):
             yield adept['username'], correct_date_time
 
 
