@@ -31,9 +31,5 @@ def get_correct_time(timestamp, timezone):
 
 if __name__ == '__main__':
     print('Midnighters list: ')
-    # for midnighter, submit_time in get_midnighters(load_attempts()):
-        # print('Devman adept {} submits challenge at {}'.format(midnighter, submit_time.strftime('%d-%m-%Y %H:%M:%S')))
-
     for midnighter in set(get_midnighters(load_attempts())):
         print("Devman adept '{}' is an owl".format(midnighter))
-
