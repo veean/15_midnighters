@@ -19,7 +19,7 @@ def get_midnighters(devman_adepts):
     for adept in devman_adepts:
         correct_date_time = get_correct_time(adept['timestamp'], adept['timezone'])
         if correct_date_time and correct_date_time.hour in (0, 5):
-            yield adept['username'], correct_date_time
+            yield adept['username']
 
 
 def get_correct_time(timestamp, timezone):
@@ -31,6 +31,10 @@ def get_correct_time(timestamp, timezone):
 
 
 if __name__ == '__main__':
-    print('Midnighters submit list: ')
-    for midnighter, submit_time in get_midnighters(load_attempts()):
-        print('Devman adept {} submits challenge at {}'.format(midnighter, submit_time.strftime('%d-%m-%Y %H:%M:%S')))
+    print('Midnighters list: ')
+    # for midnighter, submit_time in get_midnighters(load_attempts()):
+        # print('Devman adept {} submits challenge at {}'.format(midnighter, submit_time.strftime('%d-%m-%Y %H:%M:%S')))
+
+    for midnighter in set(get_midnighters(load_attempts())):
+        print("Devman adept '{}' is an owl".format(midnighter))
+
