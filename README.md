@@ -29,3 +29,7 @@
     Devman adept 'i22728350' is an owl                                       
     Devman adept 'vladmalakhov' is an owl                                    
     Devman adept 'pingvindex' is an owl    
+    
+## Project Goals
+
+The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
