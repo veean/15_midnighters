@@ -10,8 +10,7 @@ def load_attempts():
     pages = data_response.json()['number_of_pages']
     for page in range(2, pages+1):
         parameters = {'page': page}
-        for record in data_response.json()['records']:
-            yield record
+        yield from data_response.json()['records']
         data_response = requests.get(API, params=parameters)
 
 
