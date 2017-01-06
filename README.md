@@ -12,3 +12,20 @@
 
 ## Пример работы скрипта
 
+    $ python seek_dev_nighters.py  
+    
+    Midnighters list:                                                        
+    Devman adept 'stria' is an owl                                           
+    Devman adept 'RuslanKurbanov' is an owl                                  
+    Devman adept 'eremeevfd' is an owl                                       
+    Devman adept 'id213445897' is an owl                                     
+    Devman adept 'beastrock' is an owl                                       
+    Devman adept 'vitaminotar' is an owl                                     
+    Devman adept 'id20889227' is an owl                                      
+    Devman adept 'id2204745' is an owl                                       
+    Devman adept 'ЕвгенийВасильев' is an owl                                 
+    Devman adept 'gogo_whore' is an owl                                      
+    Devman adept 'mostm.endcape' is an owl                                   
+    Devman adept 'i22728350' is an owl                                       
+    Devman adept 'vladmalakhov' is an owl                                    
+    Devman adept 'pingvindex' is an owl    
