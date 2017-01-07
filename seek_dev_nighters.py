@@ -15,10 +15,12 @@ def load_attempts():
 
 
 def get_midnighters(devman_adepts):
+    midnighters_set = set()
     for adept in devman_adepts:
         correct_date_time = get_correct_time(adept['timestamp'], adept['timezone'])
-        if correct_date_time and correct_date_time.hour in (0, 5):
-            yield adept['username']
+        if correct_date_time and correct_date_time.hour in range(0, 5):
+            midnighters_set.add(adept['username'])
+    return midnighters_set
 
 
 def get_correct_time(timestamp, timezone):
@@ -31,5 +33,5 @@ def get_correct_time(timestamp, timezone):
 
 if __name__ == '__main__':
     print('Midnighters list: ')
-    for midnighter in set(get_midnighters(load_attempts())):
+    for midnighter in get_midnighters(load_attempts()):
         print("Devman adept '{}' is an owl".format(midnighter))
